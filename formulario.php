@@ -1,26 +1,28 @@
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Actividad 2 - Ejercicios JAVASCRIPT</title>
-    <script type="text/javascript" src="scripts/obtener_curp.js"> </script>
-    <script type="text/javascript" src="scripts/convercion_decimal.js"> </script>
-    <script type="text/javascript" src="scripts/lectura_cadenas.js"> </script>
+    <title>Actividad 2 Tema 4 - Ejercicios PHP</title>
 
   </head>
   <body>
-  <form class="" name="formulario_curp" action="index.html" method="post">
+<form class="" action="0" method="post">
+
+
+
+  <form class="" name="formulario_curp" action="curp.php" action="formulario.php" method="post">
 
     <h1>Obtener CURP</h1>
 
-    <label for="">Nombre</label> <input type="text" name="caja_nombre" id="caja_nombre" value="Marco">
+    <label for="">Nombre</label> <input type="text" name="caja_nombre" value="Marco">
     <br>
-    <label for="">Apellido Paterno</label> <input type="text" name="caja_primerApellido" id="caja_primerApellido" value="Villegas">
+    <label for="">Apellido Paterno</label> <input type="text" name="caja_primerApellido" value="Villegas">
     <br>
-    <label for="">Apellido Materno</label> <input type="text" name="caja_segundoApellido" id="caja_segundoApellido" value="Ulloa">
+    <label for="">Apellido Materno</label> <input type="text" name="caja_segundoApellido" value="Ulloa">
     <br>
     <label for="">Fecha de nacimiento: Año</label>
-    <select class="" name="comboBox_año" id="comboBox_año">
+    <select class="" name="comboBox_año">
 
       <option value="18">2018</option>
       <option value="17">2017</option>
@@ -95,7 +97,7 @@
 
     <label for=""> Mes</label>
 
-    <select class="" name="comboBox_mes" id="comboBox_mes">
+    <select class="" name="comboBox_mes">
       <option value="01">Enero</option>
       <option value="02">Febrero</option>
       <option value="03">Marzo</option>
@@ -111,7 +113,7 @@
     </select>
 
     <label for=""> Dia</label>
-    <select class="" name="comboBox_dia" id="comboBox_dia">
+    <select class="" name="comboBox_dia">
       <option value="01">01</option>
       <option value="02">02</option>
       <option value="03">03</option>
@@ -147,7 +149,7 @@
     <br>
 
     <label for="">Sexo</label>
-    <select class="" name="comboBox_sexo" id="comboBox_sexo">
+    <select class="" name="comboBox_sexo">
       <option value="H">Hombre</option>
       <option value="M">Mujer</option>
     </select>
@@ -156,7 +158,7 @@
 
     <label for=""> Estado de nacimiento</label>
 
-    <select class="" name="comboBox_estado" id="comboBox_estado">
+    <select class="" name="comboBox_estado">
       <option value="AS">Aguascalientes</option>
       <option value="BN">Baja California</option>
       <option value="BR">Baja California Sur</option>
@@ -190,44 +192,36 @@
       <option value="ZS">Zacatecas</option>
     </select>
     <br>
-    <button type="button" name="button_curp" id="button_curp" onclick="sacar_curp();" >Sacar CURP</button>
+    <input type="submit" name="submit_curp" value="Sacar CURP" onclick="php_curp()">
     <br>
-    <label for="">CURP:</label> <input type="text" name="caja_curp" value="" id="caja_curp">
-
-
-  </form>
-
-    <form class="" name="formulario_convercion" action="index.html" method="post">
+    <label for="">CURP:</label> <input type="text" name="caja_curp" value="">
 
       <h1>Convertir Numero en Decimal</h1>
 
-      <label for="">Numero Decimal: </label> <input type="text" name="caja_decimal" value="" id="caja_decimal">
+      <label for="">Numero Decimal: </label> <input type="text" name="caja_decimal" value="">
       <br>
-      <button type="button" name="button" onclick="conversion();" id="button">Convertir</button>
+      <button type="button" name="button" onclick="conversion()">Convertir</button>
       <br>
-      <label for="">Binario: </label> <input type="text" name="caja_binario" value="" disabled id="caja_binario">
+      <label for="">Binario: </label> <input type="text" name="caja_binario" value="" disabled>
       <br>
-      <label for="">Octal: </label> <input type="text" name="caja_octal" value="" disabled id="caja_octal">
+      <label for="">Octal: </label> <input type="text" name="caja_octal" value="" disabled>
       <br>
-      <label for="">Hexadecimal: </label> <input type="text" name="caja_hexadecimal" value="" disabled id="caja_hexadecimal">
+      <label for="">Hexadecimal: </label> <input type="text" name="caja_hexadecimal" value="" disabled>
 
-    </form>
-
-    <form class="" name="formulario_caenas" action="index.html" method="post">
       <h1>Lectura de Cadenas</h1>
 
-      <label for="">Cadena:</label> <input type="text" name="caja_Texto" value="" id="caja_Texto">
+      <label for="">Cadena:</label> <input type="text" name="caja_Texto" value="">
       <br>
-      <button type="button" name="button" onclick="cadenas();">Evaluar</button>
+      <button type="button" name="button" onclick="cadenas()">Evaluar</button>
       <br>
-      <label for="">Vocales: </label> <input type="text" name="caja_vocales" value="" disabled id="caja_vocales">
+      <label for="">Vocales: </label> <input type="text" name="caja_vocales" value="" disabled>
       <br>
-      <label for="">Consonantes: </label> <input type="text" name="caja_consonantes" value="" disabled id="caja_consonantes">
+      <label for="">Consonantes: </label> <input type="text" name="caja_consonantes" value="" disabled>
       <br>
-      <label for="">Repeticiones: </label> <input type="text" name="caja_repeticiones" value="" disabled id="caja_repeticiones">
+      <label for="">Repeticiones: </label> <input type="text" name="caja_repeticiones" value="" disabled>
       <br>
-      <label for="">Cadena Loca: </label> <input type="text" name="caja_loca" value="" disabled id="caja_loca">
-    </form>
+      <label for="">Cadena Loca: </label> <input type="text" name="caja_loca" value="" disabled>
 
+</form>
   </body>
 </html>
